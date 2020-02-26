@@ -1,0 +1,81 @@
+* { /* Very basic browser default style reset. */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.flex-item {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 64px;
+    line-height: 460px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 460px;
+}
+
+
+
+.item-1 {
+    font-size: 16px;
+    white-space: nowrap;
+    background: #5d8aa8;
+}
+
+.item-2 {
+    background: #ffbf00;
+}
+
+.item-3 {
+    background: #e32636;
+}
+
+.item-4 {
+    background: #a4c639;
+}
+
+.item-5 {
+    background: #cd9575;
+}
+
+.item-6 {
+    background: #87a96b;
+}
+
+
+
+
+
+/* Tablet. */
+@media screen and ( min-width: 768px ) {
+
+    .item-2,
+    .item-3,
+    .item-5,
+    .item-6 {
+        width: 50%;
+    }
+
+}
+
+
+/* Desktop. */
+@media screen and ( min-width: 1200px ) {
+
+    .item-2,
+    .item-3,
+    .item-4 {
+        /* We can use the "calc" function in CSS to perform mathematical operations! */
+        width: calc( 100% / 3 ); /* This will be more precise than 33.333%! */
+    }
+
+}
